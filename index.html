@@ -3,9 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hope's Touch | Premium Jewelry</title>
+    <!-- Bootstrap CSS (5.3.2) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    hope
+
+    <!-- Header Navigation -->
+    <header class="top-nav">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container site-wrap d-flex align-items-center">
+                <a class="navbar-brand logo-text" href="index.html">Hope's Touch</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 menu-links list-clean zero-margin">
+                        <li class="nav-item menu-item"><a class="nav-link page-link active" href="index.html">Home</a></li>
+                        <li class="nav-item menu-item"><a class="nav-link page-link" href="shop.html">Shop</a></li>
+                        <li class="nav-item menu-item"><a class="nav-link page-link" href="about.html">Story</a></li>
+                        <li class="nav-item"><a class="nav-link page-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link page-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item menu-item">
+                            <a class="nav-link page-link bag-link" href="cart.html">🛒 <span class="bag-count" id="cartCount">0</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Image Slider -->
+    <div class="image-slider">
+        <div class="slide-wrap" role="region" aria-roledescription="carousel" aria-label="Featured products">
+            <div class="slide-box active" data-slide="0">
+                <img src="Images/hero.png" class="full-img" alt="Diamonds">
+                <div class="slide-info">
+                    <h2 class="slide-head">Diamond Eternal</h2>
+                    <p class="slide-sub">ELEGANCE IN EVERY SPARKLE</p>
+                    <a href="shop.html" class="action-btn">Shop Now</a>
+                </div>
+            </div>
+
+            <div class="slide-box" data-slide="1">
+                <img src="Images/rings.png" class="full-img" alt="Golden Harmony">
+                <div class="slide-info">
+                    <h2 class="slide-head">Golden Harmony</h2>
+                    <p class="slide-sub">CRAFTED FOR FOREVER</p>
+                    <a href="shop.html" class="action-btn">Browse Collection</a>
+                </div>
+            </div>
+
+            <button class="slider-control prev" aria-label="Previous slide">&lsaquo;</button>
+            <button class="slider-control next" aria-label="Next slide">&rsaquo;</button>
+
+            <div class="slide-indicators" aria-hidden="false"></div>
+        </div>
+    </div>
+
+    <!-- Featured Products Section -->
+    <section class="content-area">
+        <div class="site-wrap">
+            <h2 class="area-title">Hope's Choice</h2>
+            <div class="grid-layout">
+                <!-- Item 1 -->
+                <div class="three-cols">
+                    <div class="shop-card">
+                        <img src="Images/hero.png" alt="Necklace" class="card-img">
+                        <h3 class="card-name">Diamond Eternal</h3>
+                        <p class="card-price">P2,400</p>
+                        <button class="action-btn add-bag" data-name="Diamond Eternal" data-price="2400" data-img="Images/hero.png">Add to Bag</button>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="three-cols">
+                    <div class="shop-card">
+                        <img src="Images/rings.png" alt="Rings" class="card-img">
+                        <h3 class="card-name">Golden Harmony</h3>
+                        <p class="card-price">P1,200</p>
+                        <button class="action-btn add-bag" data-name="Golden Harmony" data-price="1200" data-img="Images/rings.png">Add to Bag</button>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="three-cols">
+                    <div class="shop-card">
+                        <img src="Images/earrings.png" alt="Earrings" class="card-img">
+                        <h3 class="card-name">Pearl Radiance</h3>
+                        <p class="card-price">P850</p>
+                        <button class="action-btn add-bag" data-name="Pearl Radiance" data-price="850" data-img="Images/earrings.png">Add to Bag</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Area -->
+    <footer class="page-footer">
+        <div class="site-wrap">
+            <h2 class="logo-text zero-margin">Hope's Touch</h2>
+            <p class="copy-text">&copy; 2026 Hope's Touch Jewelry. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle (Popper + JS) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Script -->
+    <script src="script.js"></script>
 </body>
 </html>

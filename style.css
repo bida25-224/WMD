@@ -1,0 +1,282 @@
+/* Hope's Touch - Meaningful 2-Word CSS */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap');
+
+/* Global Settings */
+body {
+    background-color: #0c0c0c;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, .logo-text {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Structural Classes (2-word) */
+.site-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.flex-box {
+    display: flex;
+}
+
+.item-center {
+    align-items: center;
+}
+
+.grid-layout {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.three-cols {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.list-clean {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.zero-margin {
+    margin: 0;
+}
+
+/* Header & Nav */
+.top-nav {
+    background-color: rgba(0, 0, 0, 0.95);
+    border-bottom: 1px solid #d4af37;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-text {
+    color: #d4af37;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.menu-right {
+    margin-left: auto;
+}
+
+.page-link {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0 15px;
+    font-weight: 300;
+    transition: color 0.3s;
+}
+
+.page-link:hover, .page-link.active {
+    color: #d4af37;
+}
+
+.bag-link {
+    position: relative;
+    font-size: 1.2rem;
+}
+
+.bag-count {
+    position: absolute;
+    top: -8px;
+    right: -12px;
+    background: #d4af37;
+    color: #000;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+/* Image Slider */
+.image-slider {
+    position: relative;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.slide-wrap {
+    position: relative;
+    height: 100%;
+}
+
+.slide-box {
+    position: absolute;
+    inset: 0 0 0 0;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease, transform 0.6s ease;
+    transform: scale(1.02);
+    pointer-events: none;
+}
+
+.slide-box.active {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 2;
+    pointer-events: auto;
+}
+
+/* Slider controls */
+.slider-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 5;
+}
+.slider-control.prev { left: 18px; }
+.slider-control.next { right: 18px; }
+
+.slider-control:focus { outline: 2px solid #d4af37; }
+
+/* Indicators */
+.slide-indicators {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 18px;
+    display: flex;
+    gap: 8px;
+    z-index: 6;
+}
+.slide-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.4);
+    border: none;
+    cursor: pointer;
+}
+.slide-indicators button.active {
+    background: #d4af37;
+}
+
+.full-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-info {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    background: rgba(0,0,0,0.6);
+    padding: 40px;
+    border-radius: 5px;
+    animation: slide-up 1s ease;
+}
+
+.slide-head { font-size: 3.5rem; margin: 0 0 10px 0; }
+.slide-sub { font-size: 1.1rem; letter-spacing: 3px; color: #d4af37; }
+
+/* Product Cards */
+.content-area {
+    padding: 80px 0;
+}
+
+.area-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.shop-card {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s;
+    margin-bottom: 30px;
+}
+
+.shop-card:hover {
+    transform: translateY(-10px);
+    border-color: #d4af37;
+}
+
+.card-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.card-name { font-size: 1.3rem; margin: 10px 0; }
+.card-price { color: #d4af37; font-weight: 600; font-size: 1.1rem; }
+
+/* Buttons */
+.action-btn {
+    background: #d4af37;
+    color: #000;
+    border: none;
+    padding: 12px 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.action-btn:hover {
+    background: #fff;
+    color: #d4af37;
+}
+
+/* Footer */
+.page-footer {
+    background: #000;
+    padding: 60px 0;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.copy-text {
+    color: #888;
+    font-weight: 300;
+}
+
+/* Animations */
+@keyframes slide-up {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .three-cols { flex: 0 0 50%; max-width: 50%; }
+}
+
+@media (max-width: 768px) {
+    .three-cols { flex: 0 0 100%; max-width: 100%; }
+    .slide-head { font-size: 2.5rem; }
+}
+
+/* Utility helpers missing in markup */
+.img-round { border-radius: 8px; }
+.box-shadow { box-shadow: 0 6px 18px rgba(0,0,0,0.6); }

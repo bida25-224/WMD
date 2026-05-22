@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | Hope's Touch</title>
+    <!-- Bootstrap CSS (5.3.2) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="top-nav">
+        <div class="site-wrap flex-box item-center">
+            <a class="logo-text" href="index.html">Hope's Touch</a>
+            <nav class="nav-menu menu-right">
+                <ul class="menu-links flex-box list-clean zero-margin">
+                    <li class="menu-item"><a class="page-link" href="index.html">Home</a></li>
+                    <li class="menu-item"><a class="page-link" href="shop.html">Shop</a></li>
+                    <li class="menu-item"><a class="page-link" href="about.html">Story</a></li>
+                    <li class="menu-item"><a class="page-link" href="blog.html">Blog</a></li>
+                    <li class="menu-item"><a class="page-link" href="contact.html">Contact</a></li>
+                    <li class="menu-item">
+                        <a class="page-link bag-link active" href="cart.html">
+                            🛒 <span class="bag-count" id="cartCount">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="content-area">
+        <div class="site-wrap">
+            <h1 class="area-title">Your Bag</h1>
+            <div id="cartItems" class="grid-layout">
+                <!-- Items injected by script -->
+            </div>
+            <div style="margin-top: 50px; border-top: 1px solid #333; padding-top: 30px; text-align: right;">
+                <h3 class="logo-text" style="font-size: 1.5rem;">Total: <span id="cartTotal">P0</span></h3>
+                <button id="checkoutBtn" class="action-btn" style="margin-top: 20px;">Checkout</button>
+                <button id="clearBtn" class="action-btn" style="background: transparent; color: #ff4444; border: 1px solid #ff4444; margin-top: 20px; margin-left: 10px;">Clear Bag</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="page-footer">
+        <div class="site-wrap">
+            <h2 class="logo-text zero-margin">Hope's Touch</h2>
+            <p class="copy-text">&copy; 2026 Hope's Touch Jewelry. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle (Popper + JS) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
